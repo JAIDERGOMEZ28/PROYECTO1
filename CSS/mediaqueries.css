@@ -1,0 +1,56 @@
+/*lo enlazamos en style.css-->@import "mediaqueries.css"*/
+/*lo q se pretende es no tener muchos estilos en una sola hoja*/
+@media only screen and (max-width: 600px){/*cuando nos encontremos en un dispositivo*/
+                                           /*por debajo de los 600px haga;*/
+.navbar{/*cuando tengamos nuestra pantalla menos de 600px cambia de color*/
+    background-color: rgb(199, 146, 12);/*cambia el color del header*/
+    height: 80px;
+    box-shadow: 2px 2px 15px 0px rgba(8, 8, 8, 0.42);/*difuminado*/
+    align-items: center;
+}
+.navbar .menu{/*permite comportarce como columna*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background-color: rgb(197, 116, 62);
+    height: 50vh;
+    left: -1em;
+    transform: translateY(-120%);/*la dejamos pendiente. despues de codificar .navbar .menu*/
+    transition: all 1.4s;
+}
+.navbar .menu-toggle{/*con esta clase traemos de vuelta a nuestro menu.*/
+    transform: translateY(0%);
+}
+.menu li{
+    margin-top: 3ems;/*separa los items*/
+}
+.navbar .menu-bar{
+    display: block;/*nuevamente aparecen las 3 lineas*/
+    font-size: 2em;/*tamaño de la lineas*/
+    color: rgba(87, 79, 4, 0.863);/*color de la lineas*/
+    cursor: pointer;/*aparece el vinculo sobre las lineas*/
+   /* margin-left: 450px;*/
+}
+/*MAIN SECTION*/
+.main{
+    display: flex;
+    flex-direction: column-reverse;/*primero la imagen luego el texto*/
+    align-items: center;/*centrado verticalmente*/
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    height: 70vh;
+}
+.main img{
+    width: 12em;/*hacemos la imagen mas pequeñita*/
+}
+.main h1{
+    margin-top: 50px;/*subimos el texto*/
+}
+.main .button-content{/*colocamos un boton sobre otro*/
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+}

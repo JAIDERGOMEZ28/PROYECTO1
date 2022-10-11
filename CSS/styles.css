@@ -1,0 +1,95 @@
+/*tenemos nuestro tipo de letras roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300;1,400;1,500&display=swap');
+@import 'mediaqueries.css';
+/*creamos stylos por defecto*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+/*colocamos nuestra imagen de fondo*/
+.hero{
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../img/serumiv.jpg);
+    max-width: 100%;
+}
+.navbar{
+    grid-template-columns: repeat(9, 1fr);
+    padding: 30px;
+}
+.navbar .brand{
+    color: rgb(30, 128, 214);
+    margin-top: 10px;
+}
+/*distribuimos horizontalmente el menu*/
+.navbar.menu{
+    grid-column: 6/9;
+    display:flex;
+    margin-top: 15px;
+}
+/*desaparece los punticos de los items de separacion*/
+.menu li {
+    list-style: none;
+}
+/*ingresamos a nuestros enlaces directamente*/
+.menu li a{
+    text-decoration: none;/*desaparece la linea de por debajo*/
+    margin-right: 3em;/*separacion de los menu*/
+    font-size: 1.3em;/*incrementa el tamaño de la letra*/
+    color: rgb(13, 8, 32);/*color de la letra*/
+    font-weight: 200;/*resalta el texto*/
+    padding: 10px 20px;
+}
+.menu li a:hover{/*cuando coloquemos el puntero encima cambia de color.*/
+    background-color: rgb(8, 18, 26);
+    transition: all .10s;/*colocamos un transition de 5 segundos.*/
+    color: black;/*color de la letra*/
+}
+/* con esta le decimos q desaparezca las 3 liniecitas y aparezca*/
+.menu-bar{
+    display: none;
+}
+
+/*MAIN SECTION*/
+.main{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    text-align: 70vh;
+    height: 70vh;
+}
+.content-info{/*sube o baja h1, h2, button*/
+    margin-top: 5em;
+    color: rgb(180, 112, 23);
+}
+button{
+    cursor: pointer;
+    color: rgb(41, 19, 2);
+    box-shadow: 0px 3px 14px 8px rgba(10, 10, 10, 0.78);
+}
+button:hover{
+    box-shadow: none;
+}
+.btn-toBuy, .read-more{
+    background-color: sandybrown;
+    padding: 8px 40px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    border: none;
+}
+.read-more{
+    background: none;
+    border: 1px solid rgb(37, 32, 32);
+    margin: 20px;
+}
+.main img{
+    margin: 0em;
+    float: right;
+    margin-top: -22em;
+}
